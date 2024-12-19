@@ -1,0 +1,14 @@
+<h1>Dashboard</h1>
+<form action="/dashboard" method="POST">
+  <input type="text" name="subject" placeholder="Matéria" required>
+  <input type="number" name="grade" placeholder="Nota" required>
+  <button type="submit">Adicionar</button>
+</form>
+<table>
+  <tr><th>Matéria</th><th>Nota</th></tr>
+  {% for grade in grades %}
+    <tr><td>{{ grade.subject }}</td><td>{{ grade.grade }}</td></tr>
+  {% endfor %}
+</table>
+<p>Média: {{ avg_grade }}</p>
+<a href="/boletim">Gerar Boletim</a> | <a href="/logout">Sair</a>

@@ -1,0 +1,8 @@
+<h1>Boletim</h1>
+<table>
+  <tr><th>Matéria</th><th>Nota</th></tr>
+  {% for grade in grades %}
+    <tr><td>{{ grade.subject }}</td><td>{{ grade.grade }}</td></tr>
+  {% endfor %}
+</table>
+<p>Média: {{ avg_grade }}</p>
